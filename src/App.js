@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'styled-components'
+import Nav from './components/Nav'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Card from './components/Card'
@@ -8,6 +9,7 @@ import content from './content'
 
 const theme = {
   colors: {
+    nav: '#658864', 
     header: '#ebfbff',
     body: '#fff',
     footer: '#003333',
@@ -20,6 +22,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
+        <Nav />
         <Header />
         <Container>
           {content.map((item, index) => (

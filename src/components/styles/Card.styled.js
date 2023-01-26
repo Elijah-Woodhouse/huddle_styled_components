@@ -12,6 +12,7 @@ export const StyledCard = styled.div`
 
   img {
     width: 80%;
+    margin-left: 10%;
   }
 
   & > div {
