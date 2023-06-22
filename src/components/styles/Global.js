@@ -30,14 +30,6 @@ const GlobalStyles = createGlobalStyle`
     transition: transform 0.3s;
   }
   
-  .toggle-button.hidden::after {
-    content: '+';
-  }
-  
-  .toggle-button.visible::after {
-    content: '-';
-  }
-  
   .toggle-button:hover {
     transform: scale(1.1);
   }
@@ -50,6 +42,32 @@ const GlobalStyles = createGlobalStyle`
   img {
     max-width: 100%;
 }
+
+.checkbox-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 options per row */
+  grid-gap: 10px; /* Spacing between columns and rows */
+  list-style-type: none;
+  padding: 0;
+}
+
+.checkbox-list li {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-list input[type='checkbox'] {
+  margin-right: 5px;
+  /* Additional checkbox styles if needed */
+}
+
+.checkbox-list label {
+  font-size: 12px; /* Smaller font size */
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
 `
 
 export default GlobalStyles

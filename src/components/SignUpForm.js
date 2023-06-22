@@ -9,8 +9,10 @@ const initialFormValues = {
   password: '',
   homeAddress: '',
   phone: '',
-  produce_to_share: [],
-  looking_for: [],
+  bio: '',
+  comments: '',
+  produce_to_share: {},
+  looking_for: {},
   trade_radius: 0,
 }
 
@@ -21,6 +23,13 @@ export default function SignUpForm(props) {
   // ✨ where are my props? Destructure them here
   const { signUp } = props;
   const produce = produce_content;
+
+  const toTradeItems = produce.sort((a, b) => a.localeCompare(b));;
+  const toShareItems = produce.sort((a, b) => a.localeCompare(b));;
+
+   {/* ===============================================================================================================================
+      ===============================TOGGLE FUNCITONALITY FOR THE TWO LISTS====================================================================
+      ================================================================================================================================== */}
 
   const toggleTrade = (event) => {
     event.preventDefault();
@@ -36,28 +45,41 @@ export default function SignUpForm(props) {
     setValues(initialFormValues);
   }, [])
 
+   {/* ===============================================================================================================================
+      =========================================CHANGE HANDLERS====================================================================
+      ================================================================================================================================== */}
+
   const onChange = evt => {
     const { id, value } = evt.target
     setValues({ ...values, [id]: value })
   }
-  
-  const handleCheckboxChange = (event) => {
-    const { id, value, checked } = event.target;
 
-    setValues((values) => ({
-      ...values,
-      [id]: checked
-        ? [...values[id], value]
-        : values[id].filter((item) => item !== value)
-    }))
-  // Perform additional actions based on the selected values
-};
+  const handleCheckboxChange = (event, checklistName) => {
+    const { value, checked } = event.target;
+
+    setValues((prevValues) => ({
+      ...prevValues,
+      [checklistName]: {
+        ...prevValues[checklistName],
+        [value]: checked,
+      },
+    }));
+  };
+
+
+   {/* ======================================================================================================================================
+      ===============================SUBMIT FUNCTIONALITY SENDING DATA TO SERVER====================================
+      ================================================================================================================================== */}
 
   const onSubmit = evt => {
     evt.preventDefault()
     // ✨ implement
     signUp(values);
   }
+
+   {/* ==================================================================================================================
+      ===============================DISABLES OR ENABLES SUBMIT BUTTON DEPENING ON FORM STATUS====================================
+      ================================================================================================================================== */}
 
   const isDisabled = () => {
     // ✨ implement
@@ -67,6 +89,13 @@ export default function SignUpForm(props) {
       return false
     }
   }
+
+
+
+    {/* ================================================================================================================================================
+      =============================================================FORM JSX===============================================================================================
+      ================================================================================================================================================================ */}
+
 
   return (
     <div class="form-background-container">
@@ -81,7 +110,7 @@ export default function SignUpForm(props) {
         maxLength={20}
         value={values.username}
         onChange={onChange}
-        placeholder="Enter Username"
+        placeholder="Enter a unique Username"
         id="username"
       />
       <label>Password: </label>
@@ -92,14 +121,16 @@ export default function SignUpForm(props) {
         placeholder="Enter Password"
         id="password"
       />
-      <label>Personal Info: </label>
+      <label>Personal Info</label>
+      <label>Address:</label>
       <input
         maxLength={200}
         value={values.homeAddress}
         onChange={onChange}
         placeholder="Enter Home Address"
-        id="address"
+        id="homeAddress"
       />
+      <label>Phone: </label>
       <input
         maxLength={20}
         value={values.phone}
@@ -107,22 +138,34 @@ export default function SignUpForm(props) {
         placeholder="Phone #"
         id="phone"
       />
+      <label>Your Story: </label>
+      <input
+        maxLength={1000}
+        value={values.bio}
+        onChange={onChange}
+        placeholder="A short Bio. What do you enjoy?"
+        id="bio"
+      />
+
+      {/* ===============================================================================================================================
+      ===============================ITEMS TO TRADE LIST====================================================================
+      ================================================================================================================================== */}
+
       <label>Produce that you have to trade: </label>
       <button className={`toggle-button ${hideTrade ? 'hidden' : 'visible'}`} onClick={toggleTrade}>
         {hideTrade ? '+' : '-'}
       </button>
       {!hideTrade && (
-      <ul>
-      {produce.map((item) => (
+      <ul className="checkbox-list">
+      {toShareItems.map((item) => (
           <li key={item}>
             <label>
               <input
-                id="produce_to_share"
                 type="checkbox"
                 name="produce_to_share"
                 value={item}
-                checked={values.produce_to_share.includes(item)}
-                onChange={handleCheckboxChange}
+                checked={values.produce_to_share[item] || false}
+                onChange={(event) => handleCheckboxChange(event, 'produce_to_share')}
               />
               {item}
             </label>
@@ -130,23 +173,27 @@ export default function SignUpForm(props) {
         ))}
       </ul>
       )}
+
+
+ {/* ===============================================================================================================================
+      ===============================ITEMS TO LOOK FOR LIST====================================================================
+      ================================================================================================================================== */}
+
       <label>Prodce that you want: </label>
       <button className={`toggle-button ${hideSearch ? 'hidden' : 'visible'}`} onClick={toggleSearch}>
         {hideSearch ? '+' : '-'}
       </button>
-
       {!hideSearch && ( 
-      <ul>
-      {produce.map((item) => (
+      <ul className="checkbox-list">
+      {toTradeItems.map((item) => (
           <li key={item}>
             <label>
               <input
-                id="produce_to_share"
                 type="checkbox"
-                name="produce_to_share"
+                name="looking_for"
                 value={item}
-                checked={values.produce_to_share.includes(item)}
-                onChange={handleCheckboxChange}
+                checked={values.looking_for[item] || false}
+                onChange={(event) => handleCheckboxChange(event, 'looking_for')}
               />
               {item}
             </label>
@@ -154,6 +201,15 @@ export default function SignUpForm(props) {
         ))}
       </ul>
       )}
+
+<label>Additional Comments: </label>
+      <input
+        maxLength={20}
+        value={values.comments}
+        onChange={onChange}
+        placeholder="Any more details you'd like to add?"
+        id="comments"
+      />
       
       <button disabled={isDisabled()} id="submitCredentials">Submit</button>
     </form>
