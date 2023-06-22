@@ -1,4 +1,6 @@
 import { ThemeProvider } from 'styled-components'
+import React, { useEffect, useState } from 'react'
+import { NavLink, Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import Nav from './components/Nav'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -6,6 +8,7 @@ import Card from './components/Card'
 import { Container } from './components/styles/Container.styled'
 import GlobalStyles from './components/styles/Global'
 import content from './content'
+import SignUpForm from './components/SignUpForm'
 
 const theme = {
   colors: {
@@ -18,17 +21,28 @@ const theme = {
 }
 
 function App() {
+
+  const navigate = useNavigate()
+  
+
+
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <Nav />
-        <Header />
-        <Container>
-          {content.map((item, index) => (
-            <Card key={index} item={item} />
-          ))}
-        </Container>
+        <Routes>
+          <Route path="/" element={
+            <>
+            <Nav />
+            <Header />
+            <Container>
+              {content.map((item, index) => (
+                <Card key={index} item={item} />
+              ))}
+            </Container>
+          </>} />
+          <Route path="/signup" element={<SignUpForm/>} />
+        </Routes>
         <Footer />
       </>
     </ThemeProvider>

@@ -16,7 +16,7 @@ export default function Footer() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </li>
             <li>+1-543-123-4567</li>
-            <li>example@huddle.com</li>
+            <li>example@communityfoodshareproject.com</li>
           </ul>
           <ul>
             <li>About Us</li>
@@ -33,7 +33,7 @@ export default function Footer() {
           <SocialIcons />
         </Flex>
 
-        <p>&copy; 2021 Huddle. All rights reserved</p>
+        <p>&copy; 2023 community-food non-profit. All rights reserved</p>
       </Container>
     </StyledFooter>
   )

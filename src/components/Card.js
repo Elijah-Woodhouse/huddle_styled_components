@@ -1,4 +1,5 @@
 import { StyledCard } from './styles/Card.styled'
+import { Button } from './styles/Button.styled'
 
 export default function Card({ item: { id, title, body, image } }) {
   return (
