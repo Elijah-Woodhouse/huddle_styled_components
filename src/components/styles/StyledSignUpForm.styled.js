@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
 export const StyledSignUpForm = styled.form`
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+max-width: 400px;
+margin: 50px auto;
+padding: 20px;
+background-color: rgba(255, 255, 255, 0.8); /* Add background color to make the form container opaque */
+border-radius: 10px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
 
   h1 {
   text-align: center;

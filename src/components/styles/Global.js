@@ -15,6 +15,12 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+  .form-background-container {
+      background-image: url("../../images/farmers-market-produce.jpeg");
+      background-size: cover;
+      background-position: center;
+  }
+
   p {
     opacity: 0.6;
     line-height: 1.5;

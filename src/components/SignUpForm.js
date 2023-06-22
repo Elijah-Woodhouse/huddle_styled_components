@@ -41,6 +41,7 @@ export default function SignUpForm(props) {
   }
 
   return (
+    <div class="form-background-container">
     <StyledSignUpForm>
     <form id="loginForm" onSubmit={onSubmit}>
       <h2>Sign Up</h2>
@@ -86,5 +87,6 @@ export default function SignUpForm(props) {
       <button disabled={isDisabled()} id="submitCredentials">Submit</button>
     </form>
     </StyledSignUpForm>
+    </div>
   )
 }
