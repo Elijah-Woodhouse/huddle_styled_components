@@ -7,7 +7,7 @@ import Footer from './components/Footer'
 import Card from './components/Card'
 import { Container } from './components/styles/Container.styled'
 import GlobalStyles from './components/styles/Global'
-import content from './content'
+import {card_content, produce_content} from './content'
 import SignUpForm from './components/SignUpForm'
 
 const theme = {
@@ -36,7 +36,7 @@ function App() {
             <Nav />
             <Header />
             <Container>
-              {content.map((item, index) => (
+              {card_content.map((item, index) => (
                 <Card key={index} item={item} />
               ))}
             </Container>

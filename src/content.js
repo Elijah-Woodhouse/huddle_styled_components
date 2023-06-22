@@ -1,4 +1,4 @@
-const content = [
+const card_content = [
   {
     id: 1,
     title: 'Grow Together',
@@ -19,4 +19,6 @@ const content = [
   },
 ]
 
-export default content
+const produce_content = ["lettuce", "tomato", "spinach", "beets", "zuchinni", "chamomile", "sunflower seeds", "pumpkins", "melons", "echinacea"]
+
+export {card_content, produce_content};

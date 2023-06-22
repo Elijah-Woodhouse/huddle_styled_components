@@ -21,6 +21,27 @@ const GlobalStyles = createGlobalStyle`
       background-position: center;
   }
 
+  .toggle-button {
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .toggle-button.hidden::after {
+    content: '+';
+  }
+  
+  .toggle-button.visible::after {
+    content: '-';
+  }
+  
+  .toggle-button:hover {
+    transform: scale(1.1);
+  }
+
   p {
     opacity: 0.6;
     line-height: 1.5;
