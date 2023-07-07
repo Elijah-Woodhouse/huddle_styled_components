@@ -3,6 +3,10 @@ import axios from 'axios';
 import PT from 'prop-types'
 import { StyledSignUpForm } from './styles/StyledSignUpForm.styled'
 import { produce_content } from '../content'
+import InitialProduceInventoryForm from './forms/InitialProduceInventory';
+import InitialSearchForProduceForm from './forms/InitialSearchForProduce';
+import InitialUserNameAndPasswordForm from './forms/NamePasswordSignUp';
+import AddressForm from './forms/Address';
 
 
 const initialFormValues = {
@@ -72,7 +76,8 @@ export default function SignUpForm(props) {
       ===============================SUBMIT FUNCTIONALITY SENDING DATA TO SERVER====================================
       ================================================================================================================================== */}
 
-  const onSubmit = evt => {
+  const onSubmit = (evt, userCredentials) => {
+    axios.post("https://localhost3000/users", userCredentials)
     evt.preventDefault()
     props.signUp(values);
   }

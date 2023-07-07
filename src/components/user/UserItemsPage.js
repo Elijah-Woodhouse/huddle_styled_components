@@ -10,7 +10,7 @@ export default function UserItemsPage() {
       }
       
     const [values, setValues] = useState(initialFormValues);
-    const [hideTrade, setHideTrade] = useState(false);
+    const [hideTrade, setHideTrade] = useState(true);
     const produce = produce_content;
       
     const toShareItems = produce.sort((a, b) => a.localeCompare(b));;

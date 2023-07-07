@@ -1,5 +1,8 @@
 (ns neighborhood_food_backend.db
-    (:require [clojure.java.jdbc :as jdbc]))
+    (:require [clojure.java.jdbc :as jdbc]
+              '[clojure.string :as str]
+              '[clojure.java.jdbc :as jdbc]
+              '[clojure.uuid :as uuid]))
 
 (def db-spec
   {:dbtype "postgresql"
@@ -47,10 +50,10 @@
                                              )")))
 
 (defn create-user [name address]
-      (jdbc/with-db-connection [conn db-spec]
-                               (jdbc/insert! conn :users
-                                             {:name name}
-                                             :address address)))
+  (let [user-id (str/replace (str (uuid/random-uuid)) #"-" "")
+        user {:user-id user-id :name name :address address}]
+    (jdbc/with-db-connection [conn db-spec]
+                             (jdbc/insert! conn :users user))))
 
 (defn insert-produce [name amount species desired-produce-id]
       (jdbc/with-db-connection [conn db-spec]

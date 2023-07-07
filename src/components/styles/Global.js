@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
   .form-background-container {
       background-image: url("../../images/farmers-market-produce.jpeg");
       background-size: cover;
-      background-position: center;
+      background-position: fixed;
   }
 
   .toggle-button {
@@ -85,20 +85,29 @@ const GlobalStyles = createGlobalStyle`
 }
 
 .navbar li {
-  float: left;
+  padding: 2% 5%;
+  background-color: ${({ theme }) => theme.colors.nav};
+}
+
+.navbar button {
+  border: none;
+  background-color: ${({ theme }) => theme.colors.nav};
 }
 
 .navbar li a {
   display: block;
   text-align: center;
-  padding: 14px 16px;
   background-color: hsl(192, 100%, 9%);
   text-decoration: none;
   transition: color 0.3s; /* Add transition effect for smooth color change */
 }
 
 .navbar li a:hover {
-  color: #fff;
+  text-shadow: #F2EAD3;
+}
+
+.navbar button:hover {
+  color: #0A6EBD;
 }
 
 {==============================================USER  NAVBAR============================================}

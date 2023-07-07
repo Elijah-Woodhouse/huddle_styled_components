@@ -4,8 +4,11 @@ import styled from 'styled-components';
 import UserItemsPage from './UserItemsPage';
 import UserMessagePage from './UserMessagePage';
 import UserLookingForPage from './UserLookingForPage';
+import axios from 'axios';
 
-export default function UserProfile() {
+export default function UserProfile(props) {
+
+    const { fetch_user } = props;
 
     const [activeComponent, setActiveComponent] = useState('');
 

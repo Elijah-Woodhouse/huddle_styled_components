@@ -9,7 +9,7 @@ export default function UserLookingForPage() {
       }
       
     const [values, setValues] = useState(initialFormValues);
-    const [hideSearch, setHideSearch] = useState(false);
+    const [hideSearch, setHideSearch] = useState(true);
     const produce = produce_content;
       
     const toTradeItems = produce.sort((a, b) => a.localeCompare(b));;

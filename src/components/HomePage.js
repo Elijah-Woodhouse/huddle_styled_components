@@ -13,7 +13,7 @@ export default function Header() {
 
             <p>
               Food is one of the oldest bridges humanity has to connect with their community.
-              From pot-lucks to weddings and funerals, food has always been an absolute staple for gatherings of all kinds.
+              From birthdays to weddings and funerals, food has always been an absolute staple for gatherings of all kinds.
               The intention of this project is to bring communities back together doing one of the oldest practices known to mankind, growing food.
               It is our hope that you will find this resource helpful in connecting back to your roots and sharing that with your community.
               <br></br>
