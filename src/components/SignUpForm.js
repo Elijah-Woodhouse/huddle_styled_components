@@ -106,50 +106,6 @@ export default function SignUpForm(props) {
     <StyledSignUpForm>
     <form id="loginForm" onSubmit={onSubmit}>
       <h2>Sign Up</h2>
-      <p>
-        Tell us your story neighbor!
-      </p>
-      <label>Name: </label>
-      <input
-        maxLength={20}
-        value={values.username}
-        onChange={onChange}
-        placeholder="Enter a unique Username"
-        id="username"
-      />
-      <label>Password: </label>
-      <input
-        maxLength={20}
-        value={values.password}
-        onChange={onChange}
-        placeholder="Enter Password"
-        id="password"
-      />
-      <label>Personal Info</label>
-      <label>Address:</label>
-      <input
-        maxLength={200}
-        value={values.homeAddress}
-        onChange={onChange}
-        placeholder="Enter Home Address"
-        id="homeAddress"
-      />
-      <label>Phone: </label>
-      <input
-        maxLength={20}
-        value={values.phone}
-        onChange={onChange}
-        placeholder="Phone #"
-        id="phone"
-      />
-      <label>Your Story: </label>
-      <input
-        maxLength={1000}
-        value={values.bio}
-        onChange={onChange}
-        placeholder="A short Bio. What do you enjoy?"
-        id="bio"
-      />
 
       {/* ===============================================================================================================================
       ===============================ITEMS TO TRADE LIST====================================================================
