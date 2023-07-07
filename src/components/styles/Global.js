@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
@@ -43,10 +44,12 @@ const GlobalStyles = createGlobalStyle`
     max-width: 100%;
 }
 
+{==============================================SIGN UP FORM==============================================}
+
 .checkbox-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 3 options per row */
-  grid-gap: 10px; /* Spacing between columns and rows */
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 10px; 
   list-style-type: none;
   padding: 0;
 }
@@ -66,6 +69,145 @@ const GlobalStyles = createGlobalStyle`
   color: #333;
   display: flex;
   align-items: center;
+}
+
+{==============================================HOMEPAGE NAVBAR==============================================}
+
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: ${({ theme }) => theme.colors.nav};
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  background-color: hsl(192, 100%, 9%);
+  text-decoration: none;
+  transition: color 0.3s; /* Add transition effect for smooth color change */
+}
+
+.navbar li a:hover {
+  color: #fff;
+}
+
+{==============================================USER  NAVBAR============================================}
+.user-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.left-section img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.search-box {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.right-section button {
+  margin-left: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+{============================================USER PROFILE=========================================}
+
+
+.user-profile {
+  display: flex;
+}
+
+.profile-picture img {
+  width: 30px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-text: left;
+}
+
+.trade-message-contacts-looking-for {
+  text-align: center;
+  border: solid;
+  width: 75%
+}
+
+.items-for-trade,
+.items-looking-for-trade {
+  margin-top: 20px;
+}
+
+.user-profile ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-profile ul li {
+  margin-bottom: 10px;
+}
+
+.picture-and-contact-info {
+  flex-display: left;
+  width: 25%;
+  border: solid;
+}
+
+.trade-bar-nav {
+  border-bottom: solid;
+  border-width: 100%;
+  padding: 10px 90px 10px 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trade-bar-nav button {
+  border: none;
+  background-color: black; 
+}
+
+.trade-bar-nav button:hover {
+  color: ${({ theme }) => theme.colors.nav};
+}
+
+.message-box {
+  width: 70%;
+  height: 20%;
+  margin-bottom: 10%;
+}
+
+.messages li {
+  border: solid;
 }
 
 `

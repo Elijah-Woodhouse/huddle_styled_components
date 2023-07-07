@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb0e2008-f3fd-4ebf-971e-4bdff588b1f7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/neighborhood-food-backend/src/neighborhood_food_backend/core.clj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/neighborhood-food-backend/src/neighborhood_food_backend/db.clj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/neighborhood-food-backend/src/neighborhood_food_backend/handlers.clj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/neighborhood-food-backend/src/neighborhood_food_backend/routes.clj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/project.clj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/testing-testing/test.clj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/neighborhood_food_backend/project.clj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/neighborhood_food_backend/src/neighborhood_food_backend/core.clj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/neighborhood_food_backend/src/neighborhood_food_backend/db.clj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/neighborhood_food_backend/src/neighborhood_food_backend/handler.clj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/neighborhood_food_backend/src/neighborhood_food_backend/routes.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neighborhood-food-backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/neighborhood_food_backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neighborhood-food-backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/neighborhood_food_backend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neighborhood-food-backend/project.clj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neighborhood-food-backend/src/neighborhood_food_backend/core.clj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neighborhood-food-backend/src/neighborhood_food_backend/db.clj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neighborhood-food-backend/src/neighborhood_food_backend/handlers.clj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neighborhood-food-backend/src/neighborhood_food_backend/routes.clj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neighborhood-food-backend/test/neighborhood_food_backend/handler_test.clj" beforeDir="false" afterPath="$PROJECT_DIR$/neighborhood_food_backend/test/neighborhood_food_backend/handler_test.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/components/SignUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/SignUpForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +39,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/elijahwoodhouse/Desktop/PersonalProjects/neighborhood-garden-application/huddle_styled_components/backend"
+    "last_opened_file_path": "/Users/elijahwoodhouse/Desktop/PersonalProjects/neighborhood-garden-application/huddle_styled_components/backend",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.56436783",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">

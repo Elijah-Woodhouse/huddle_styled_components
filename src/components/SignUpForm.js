@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 import PT from 'prop-types'
 import { StyledSignUpForm } from './styles/StyledSignUpForm.styled'
 import { produce_content } from '../content'
@@ -20,12 +21,12 @@ export default function SignUpForm(props) {
   const [values, setValues] = useState(initialFormValues);
   const [hideTrade, setHideTrade] = useState(false);
   const [hideSearch, setHideSearch] = useState(false);
-  // ✨ where are my props? Destructure them here
   const { signUp } = props;
   const produce = produce_content;
 
   const toTradeItems = produce.sort((a, b) => a.localeCompare(b));;
   const toShareItems = produce.sort((a, b) => a.localeCompare(b));;
+
 
    {/* ===============================================================================================================================
       ===============================TOGGLE FUNCITONALITY FOR THE TWO LISTS====================================================================
@@ -73,8 +74,7 @@ export default function SignUpForm(props) {
 
   const onSubmit = evt => {
     evt.preventDefault()
-    // ✨ implement
-    signUp(values);
+    props.signUp(values);
   }
 
    {/* ==================================================================================================================
@@ -82,7 +82,6 @@ export default function SignUpForm(props) {
       ================================================================================================================================== */}
 
   const isDisabled = () => {
-    // ✨ implement
     if(values.username.trim().length < 3 || values.password.trim().length < 8){
       return true
     } else if( values.username.trim().length >= 3 && values.password.trim().length >= 8 ){
@@ -179,7 +178,7 @@ export default function SignUpForm(props) {
       ===============================ITEMS TO LOOK FOR LIST====================================================================
       ================================================================================================================================== */}
 
-      <label>Prodce that you want: </label>
+      <label>Produce that you want: </label>
       <button className={`toggle-button ${hideSearch ? 'hidden' : 'visible'}`} onClick={toggleSearch}>
         {hideSearch ? '+' : '-'}
       </button>
