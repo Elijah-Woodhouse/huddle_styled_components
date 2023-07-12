@@ -1,68 +1,42 @@
-import { React, useState } from 'react';
+import React from 'react';
 
 export default function AddressForm() {
-
-    const [ values, setValues ] = useState;
-
-    const initialFormValues = {
-        country: "",
-        state: "",
-        city: "",
-        street_address: "",
-        zip_code: "",
-    }
-
-    const onChange = evt => {
-        const { id, value } = evt.target
-        setValues({ ...values, [id]: value })
-      }
-
     return(
         <>
-        <div className="address-form-container">
-            <form className="address-form">
-                <label>Country: </label>
-                    <input
-                        maxLength={20}
-                        value={values.country}
-                        onChange={onChange}
-                        placeholder="Enter a unique Username"
-                        id="country"
+        <form>
+        <label>Name: </label>
+                <input
+                    maxLength={20}
+                    value={values.username}
+                    onChange={onChange}
+                    placeholder="Enter a unique Username"
+                    id="username"
+                />
+            <label>Email: </label>
+                <input
+                     maxLength={40}
+                    value={values.username}
+                    onChange={onChange}
+                    placeholder="Enter a unique Username"
+                    id="username"
+                />
+            <label>Password: </label>
+                <input
+                    maxLength={20}
+                    value={values.password}
+                    onChange={onChange}
+                    placeholder="Enter Password"
+                    id="password"
+                />
+            <label>Enter Password Again: </label>
+                <input
+                    maxLength={20}
+                    value={values.password}
+                    onChange={onChange}
+                    placeholder="Enter Password"
+                    id="password"
                     />
-                <label>State: </label>
-                    <input
-                        maxLength={40}
-                        value={values.state}
-                        onChange={onChange}
-                        placeholder=""
-                        id="state"
-                    />
-                <label>City: </label>
-                    <input
-                        maxLength={20}
-                        value={values.city}
-                        onChange={onChange}
-                        placeholder="Enter City"
-                        id="city"
-                    />
-                <label>Street Address: </label>
-                    <input
-                        maxLength={20}
-                        value={values.street_address}
-                        onChange={onChange}
-                        placeholder="Enter Password"
-                        id="street_address"
-                        />
-                <label>Zip Code: </label>
-                    <input
-                        maxLength={5}
-                        value={values.zip_code}
-                        onChange={onChange}
-                        placeholder="Enter Zip Code"
-                        id="zip_code"
-                        />
-            </form>
-        </div>
+        </form>
         </>
     )
 }

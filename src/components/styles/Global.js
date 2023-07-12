@@ -44,7 +44,7 @@ const GlobalStyles = createGlobalStyle`
     max-width: 100%;
 }
 
-{{{{==============================================SIGN UP FORM==============================================}}}}
+{==============================================SIGN UP FORM==============================================}
 
 .checkbox-list {
   display: grid;
@@ -70,36 +70,6 @@ const GlobalStyles = createGlobalStyle`
   display: flex;
   align-items: center;
 }
-
-{==============================================ADDRESS FORM==============================================}
-
-.address-form {
-  max-width: 400px; /* Adjust the maximum width as needed */
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(128, 128, 128, 0.3); /* Transparent grey color */
-  border-top: 2px solid #000; /* Solid top border */
-}
-
-.address-form label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.address-form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-{==============================================INITIAL PRODUCE FORM==============================================}
-
-
-{==============================================INITIAL SEARCH FOR PRODUCE FORM==============================================}
-
-
 
 {==============================================HOMEPAGE NAVBAR==============================================}
 
