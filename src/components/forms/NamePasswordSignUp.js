@@ -1,14 +1,8 @@
 import { React, useState } from 'react';
 
-export default function InitialUserNameAndPasswordForm() {
 
-    const [values, setValues] = useState;
+export default function InitialUserNameAndPasswordForm({onChange, values}) {
 
-    const initialFormValues = {
-        username: '',
-        password: '',
-        user_id: ''
-    }
 
     function validatePassword(password1, password2) {
         const isValid = password1 === password2 && /^(?=.*\d)(?=.*[A-Z])(?=.*\W)/.test(password1);
@@ -22,11 +16,6 @@ export default function InitialUserNameAndPasswordForm() {
         } else if( values.username.trim().length >= 3 && values.password.trim().length >= 8 ){
           return false
         }
-      }
-
-      const onChange = evt => {
-        const { id, value } = evt.target
-        setValues({ ...values, [id]: value })
       }
 
 
@@ -44,26 +33,26 @@ export default function InitialUserNameAndPasswordForm() {
             <label>Email: </label>
                 <input
                      maxLength={40}
-                    value={values.username}
+                    value={values.email}
                     onChange={onChange}
                     placeholder="Enter a unique Username"
-                    id="username"
+                    id="email"
                 />
             <label>Password: </label>
                 <input
                     maxLength={20}
-                    value={values.password}
+                    value={values.password1}
                     onChange={onChange}
                     placeholder="Enter Password"
-                    id="password"
+                    id="password1"
                 />
             <label>Enter Password Again: </label>
                 <input
                     maxLength={20}
-                    value={values.password}
+                    value={values.password2}
                     onChange={onChange}
                     placeholder="Enter Password"
-                    id="password"
+                    id="password2"
                     />
         </form>
         </>
