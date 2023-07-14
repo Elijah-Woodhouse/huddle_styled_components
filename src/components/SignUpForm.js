@@ -9,7 +9,8 @@ import AddressForm from './forms/Address';
 
 const initialFormValues = {
   username: '',
-  password: '',
+  password1: '',
+  password2: '',
   country: '',
   state: '',
   city: '',
@@ -77,15 +78,27 @@ export default function SignUpForm(props) {
     }));
   };
 
-  const onSubmit = (evt, userCredentials) => {};
+  const onSubmit = (evt, userCredentials) => {
+    evt.preventDefault();
+    if (activeComponent === 'username_password') {
+       setActiveComponent("address");
+    } else if (activeComponent === 'address') {
+      setActiveComponent("searching_for")
+    } else if (activeComponent === 'searching_for') {
+      setActiveComponent("produce_inventory")
+    } else if (activeComponent === 'produce_inventory') {
+      return null
+    }
+  };
 
   const isDisabled = () => {
-    if (values.username.trim().length < 3 || values.password.trim().length < 8) {
+    if (values.username.trim().length < 3 || values.password1.trim().length < 8) {
       return true;
-    } else if (values.username.trim().length >= 3 && values.password.trim().length >= 8) {
+    } else if (values.username.trim().length >= 3 && values.password1.trim().length >= 8) {
       return false;
     }
   };
+  
 
   return (
     <div className="form-background-container">

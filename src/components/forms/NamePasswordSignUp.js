@@ -8,11 +8,11 @@ export default function InitialUserNameAndPasswordForm({ onChange, values }) {
   }
 
   const isDisabled = () => {
-    if (values.username.trim().length < 3 || values.password.trim().length < 8) {
+    if (values.username.trim().length < 3 || values.password2.trim().length < 8) {
       return true;
     } else if (
       values.username.trim().length >= 3 &&
-      values.password.trim().length >= 8
+      values.password2.trim().length >= 8 && values.password1 === values.password2
     ) {
       return false;
     }
