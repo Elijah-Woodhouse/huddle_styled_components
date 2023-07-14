@@ -24,7 +24,7 @@ const theme = {
     footer: '#003333',
   },
   mobile: '768px',
-}
+};
 
 const card_1_title = card_content[0].title
 const card_1_text = card_content[0].body
@@ -39,7 +39,7 @@ beforeEach(() => {
       <App/>
     </BrowserRouter>
     </ThemeProvider>
-)})
+)});
 
 
 describe("HomePage Test for main Paragraph, welcome message and image, cards and header and footer tests", () => {

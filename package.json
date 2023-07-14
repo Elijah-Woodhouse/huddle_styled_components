@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -12,24 +13,21 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
-    "react-router-dom": "^6.13.0",
+    "react-router-dom": "^6.14.1",
     "react-scripts": "^5.0.1",
     "styled-components": "^5.3.6",
     "web-vitals": "^1.0.1",
     "webpack": "^5.88.1"
   },
-  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject"
   },
-
   "jest": {
     "testEnvironment": "jsdom"
   },
-  
   "eslintConfig": {
     "extends": [
       "react-app",

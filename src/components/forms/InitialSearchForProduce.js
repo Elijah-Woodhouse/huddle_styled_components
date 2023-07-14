@@ -8,8 +8,7 @@ export default function InitialSearchForProduceForm({handleCheckboxChange, value
 
 
     return(
-        <>
-         <form>
+            <div>
             <label>Produce that you want: </label>
             <button className={`toggle-button ${hideSearch ? 'hidden' : 'visible'}`} onClick={toggleSearch}>
                 {hideSearch ? '+' : '-'}
@@ -32,7 +31,6 @@ export default function InitialSearchForProduceForm({handleCheckboxChange, value
                 ))}
             </ul>
             )}
-        </form>
-        </>
+            </div>
     )
 }

@@ -4,7 +4,6 @@ export default function AddressForm({onChange, values}) {
 
 
     return(
-        <>
         <div className="address-form-container">
             <form className="address-form">
                 <label>Country: </label>
@@ -49,6 +48,5 @@ export default function AddressForm({onChange, values}) {
                         />
             </form>
         </div>
-        </>
     )
 }

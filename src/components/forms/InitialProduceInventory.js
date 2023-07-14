@@ -6,9 +6,7 @@ export default function InitialProduceInventoryForm({handleCheckboxChange, value
 
 
     return(
-        <>
         <div className="initial-produce-form-container">
-            <form className="inital-produce-form">
                 <label>Produce that you want: </label>
                 <button className={`toggle-button ${hideSearch ? 'hidden' : 'visible'}`} onClick={toggleSearch}>
                     {hideSearch ? '+' : '-'}
@@ -31,8 +29,6 @@ export default function InitialProduceInventoryForm({handleCheckboxChange, value
                     ))}
                 </ul>
                 )}
-            </form>
         </div>
-        </>
     )
 }
