@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import UserItemsPage from './UserItemsPage';
 import UserMessagePage from './UserMessagePage';
 import UserLookingForPage from './UserLookingForPage';
-import axios from 'axios';
+//import axios from 'axios';
 
 export default function UserProfile(props) {
 

@@ -6,7 +6,7 @@ import UserItemsPage from './UserItemsPage';
 import userProfile from './UserProfile';
 import UserMessagePage from './UserMessagePage';
 import UserProfile from './UserProfile';
-import axios from 'axios';
+//import axios from 'axios';
 
 export default function UserHomePage(props) {
 
@@ -17,7 +17,7 @@ export default function UserHomePage(props) {
 }
 
     const fetch_user = () => {
-        axios.get("https://localhost/3000/user/user_id", user_credentials)
+        //axios.get("https://localhost/3000/user/user_id", user_credentials)
     }
 
     const navigate = useNavigate();

@@ -1,5 +1,4 @@
 import { ThemeProvider } from 'styled-components'
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { NavLink, Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import Nav from './components/Nav'
@@ -24,7 +23,7 @@ const theme = {
 
 function App() {
 
-  const navigate = useNavigate()
+  //const navigate = useNavigate()
 
   // const newUser = {
   //   name: 'John Doe',
@@ -39,23 +38,23 @@ function App() {
   }
 
   const signUp = (newUser) => {
-    axios.post('http://localhost:3000/users', newUser)
-    .then(res => {
-      console.log(res.data);
-    })
-    .catch(error => {
-      console.error(error);
-    })
+    // axios.post('http://localhost:3000/users', newUser)
+    // .then(res => {
+    //   console.log(res.data);
+    // })
+    // .catch(error => {
+    //   console.error(error);
+    // })
   }
 
   const signIn = () => {
-    axios.get("http;//localhost:3000/users", userCredentials)
-    .then(res => {
-      console.log(res.data);
-    })
-    .catch(error => {
-      console.error(error)
-    })
+    // axios.get("http;//localhost:3000/users", userCredentials)
+    // .then(res => {
+    //   console.log(res.data);
+    // })
+    // .catch(error => {
+    //   console.error(error)
+    // })
   }
   
 

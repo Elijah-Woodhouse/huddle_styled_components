@@ -8,14 +8,14 @@ const card_content = [
   {
     id: 2,
     title: 'Connect Online',
-    body: "Look at the interactive map for people near you to trade food with! You'll be able to see what they have to trade and you'll be able to put your excess produce on your own profile which is available for others to see in your area, making trading seamless and convenient! ",
+    body: 'Look at the interactive map for people near you to trade food with! You\'ll be able to see what they have to trade and you\'ll be able to put your excess produce on your own profile which is available for others to see in your area, making trading seamless and convenient!',
     image: 'bountifulharvest.jpeg',
   },
   {
     id: 3,
-    title: '',
-    body: "",
-    image: '',
+    title: 'card number 3 mah lord!',
+    body: "princessss Fionaaaa",
+    image: 'This is an iamge. A Picture is supposed to be here',
   },
 ]
 

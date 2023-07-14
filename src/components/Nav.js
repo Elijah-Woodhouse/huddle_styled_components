@@ -1,6 +1,7 @@
 import { StyledNav, Image } from './styles/Nav.styled'
 import { Button } from './styles/Button.styled'
 import { NavLink, Routes, Route, useNavigate, Navigate, redirect } from 'react-router-dom';
+import React from 'react';
 
 
 
